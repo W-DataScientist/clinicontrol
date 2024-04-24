@@ -128,8 +128,7 @@ def main():
                 atendimento = (matricula, date, hora, preferencial, pressao, peso, altura, temperatura, especialidade, atestado, exame, encaminhamento, observacoes, sala, atendente, tipo, queixa, status)
                 insert_atendimento(conn, atendimento)
                 st.success("Triagem inserida!")
-                time.sleep(3)
-                pyautogui.press('f5')          
+                time.sleep(3)        
         else:
             st.warning("Por favor, preencha todos os campos obrigatórios.")
 
