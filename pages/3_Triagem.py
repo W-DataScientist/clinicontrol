@@ -3,6 +3,7 @@ import sqlite3
 from datetime import datetime
 import socket
 import time
+import pyautogui
 
 # Adicione o código CSS para ocultar o cabeçalho
 hide_header_style = """
@@ -128,7 +129,8 @@ def main():
                 atendimento = (matricula, date, hora, preferencial, pressao, peso, altura, temperatura, especialidade, atestado, exame, encaminhamento, observacoes, sala, atendente, tipo, queixa, status)
                 insert_atendimento(conn, atendimento)
                 st.success("Triagem inserida!")
-                time.sleep(3)        
+                time.sleep(3)
+                pyautogui.press('F5')
         else:
             st.warning("Por favor, preencha todos os campos obrigatórios.")
 
