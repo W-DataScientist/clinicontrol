@@ -25,16 +25,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# remover botao direito inferior
-st.markdown("""
-    <style>
-    .viewerBadge_container__r5tak {
-        display: none;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-
 # Definir a cor de fundo da página
 cor_fundo = "#dcdcdc"  # Você pode substituir pela cor desejada
 
@@ -57,9 +47,9 @@ cor_cinza_claro = "#d3d3d3"
 st.write(
     "<div style='display:flex;justify-content:space-between;'>"
     "<div style='background-color: " + cor_verde + "; width:150%; padding:0px; border-radius:0px; margin-right: 5px;'>"
-    "<h1 style='color:white;text-align:center;'>ATENDIMENTO</h1></div>"
+    "<h1 style='color:white;text-align:center;font-family: Microsoft Yi Baiti;'>ATENDIMENTO</h1></div>"
     "<div style='background-color: " + cor_verde + "; width:50%; padding:0px; border-radius:0px; margin-left: 1px;'>"
-    "<h1 style='color:white;text-align:center;'>PRÓXIMOS</h1></div>"
+    "<h1 style='color:white;text-align:center;font-family: Microsoft Yi Baiti;'>PRÓXIMOS</h1></div>"
     "</div>",
     unsafe_allow_html=True,
 )
@@ -71,18 +61,18 @@ st.write("")
 st.write(
     "<div style='padding-bottom: 10px; display: flex; justify-content: space-between;'>"
     "<div style='background-color: " + cor_cinza_claro + "; width:150%; height:450px; padding:5px; border-radius:0px; margin-right: 5px; line-height: 1;'>"
-    "<h1 style='text-align:center; margin: 0;'>Fulando de tal</h1>"
-    "<h1 style='text-align:center; margin: 0;'>Senha: C0245</h1>"
-    "<h1 style='text-align:center; margin: 0;'>Cód. 6548</h1>"
-    "<h1 style='text-align:center; margin: 0;'>Consulta</h1>"
-    "<h1 style='text-align:center; margin: 0;'>Sala-01</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>Fulando de tal</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>Senha: C0245</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>Cód. 6548</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>Consulta</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>Sala-01</h1>"
     "</div>"
     "<div style='background-color: " + cor_cinza_claro + "; width:50%; height:450px; padding:5px; border-radius:0px; line-height: 1;'>"
-    "<h1 style='text-align:center; margin: 0;'>C0245</h1>"
-    "<h1 style='text-align:center; margin: 0;'>C0845</h1>"
-    "<h1 style='text-align:center; margin: 0;'>C2545</h1>"
-    "<h1 style='text-align:center; margin: 0;'>C0285</h1>"
-    "<h1 style='text-align:center; margin: 0;'>C0237</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>C0245</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>C0845</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>C2545</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>C0285</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;'>C0237</h1>"
     "</div>"
     "</div>",
     unsafe_allow_html=True,
@@ -104,7 +94,7 @@ while True:
     data_hora_placeholder.write(
         f"""
         <div style="background-color: {cor_verde}; padding: 0px; border-radius: 0px; margin-bottom: -10px;">
-            <h1 style="color: white; text-align: center; margin: 0;">{data_hora_atual}</h1>
+            <h1 style="color: white; text-align: center; margin: 0;font-family: Microsoft Yi Baiti;">{data_hora_atual}</h1>
         </div>
         """,
         unsafe_allow_html=True,
