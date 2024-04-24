@@ -15,15 +15,13 @@ hide_header_style = """
 </style>
 """
 # Adicione o código CSS para ocultar o side bar
-st.write(
-    """
+st.markdown("""
     <style>
     .st-emotion-cache-1cypcdb {
         display: none;
     }
     </style>
-    """
-)
+""", unsafe_allow_html=True)
 
 # Use o componente st.markdown para inserir o estilo embutido na página
 st.markdown(hide_header_style, unsafe_allow_html=True)
