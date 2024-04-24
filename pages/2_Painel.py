@@ -25,6 +25,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+# remover botao direito inferior
+st.markdown("""
+    <style>
+    .viewerBadge_container__r5tak {
+        display: none !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Definir a cor de fundo da página
 cor_fundo = "#dcdcdc"  # Você pode substituir pela cor desejada
 
