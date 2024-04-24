@@ -1,4 +1,4 @@
-
+pyautogui
 matplotlib
 seaborn
 plotly
