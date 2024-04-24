@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 from datetime import datetime
+import pytz
 
 # Configurar a página antes de qualquer outra função Streamlit
 st.set_page_config(layout="wide")
@@ -62,7 +63,7 @@ st.write(
     "<div style='padding-bottom: 10px; display: flex; justify-content: space-between;'>"
     "<div style='background-color: " + cor_cinza_claro + "; width:150%; height:450px; padding:5px; border-radius:0px; margin-right: 5px; line-height: 1;'>"
     "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Fulando de tal</h1>"
-    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Senha: C0245</h1>"
+    "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Senha: C0246</h1>"
     "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Cód. 6548</h1>"
     "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Consulta</h1>"
     "<h1 style='text-align:center; margin: 0;font-family: Microsoft Yi Baiti;color: black;'>Sala-01</h1>"
@@ -80,21 +81,28 @@ st.write(
 
 # Criar uma área estática para a data e hora
 data_hora_placeholder = st.empty()
-# Função para mostrar a hora em tempo real
-@st.cache_data(ttl=1)  # Cache com tempo de vida curto para evitar que o conteúdo seja atualizado a cada segundo
-def obter_data_hora():
-    agora = datetime.now()
-    return agora.strftime("%d/%m/%Y - %H:%M:%S")
+
+# Função para obter a data e hora atual no fuso horário de Brasília
+def obter_data_hora_brasilia():
+    # Definir o fuso horário de Brasília
+    fuso_brasilia = pytz.timezone('America/Sao_Paulo')
+    # Obter a hora atual
+    data_hora_atual = datetime.now()
+    # Converter para o fuso horário de Brasília
+    data_hora_brasilia = data_hora_atual.astimezone(fuso_brasilia)
+    # Formatar a data e hora como string
+    data_hora_formatada = data_hora_brasilia.strftime("%d/%m/%Y - %H:%M:%S")
+    return data_hora_formatada
 
 # Mostrar a hora em tempo real
 while True:
-    data_hora_atual = obter_data_hora()
+    data_hora_atual_brasilia = obter_data_hora_brasilia()
     
     # Atualizar o conteúdo da área estática com a nova hora
     data_hora_placeholder.write(
         f"""
         <div style="background-color: {cor_verde}; padding: 0px; border-radius: 0px; margin-bottom: -10px;">
-            <h1 style="color: white; text-align: center; margin: 0;font-family: Microsoft Yi Baiti;">{data_hora_atual}</h1>
+            <h1 style="color: white; text-align: center; margin: 0;font-family: Microsoft Yi Baiti;">{data_hora_atual_brasilia}</h1>
         </div>
         """,
         unsafe_allow_html=True,
