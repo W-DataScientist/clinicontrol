@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 from datetime import datetime
-import pyautogui
+#import pyautogui
 
 
 pyautogui.press('f11')
