@@ -5,15 +5,16 @@ from datetime import datetime
 # Configurar a página antes de qualquer outra função Streamlit
 st.set_page_config(layout="wide")
 
-
 # Adicione o código CSS para ocultar o cabeçalho
-hide_header_style = """
-<style>
-    header.st-emotion-cache-18ni7ap {
+st.markdown("""
+    <style>
+    .st-emotion-cache-1avcm0n {
         display: none;
     }
-</style>
-"""
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Adicione o código CSS para ocultar o side bar
 st.markdown("""
     <style>
@@ -25,25 +26,6 @@ st.markdown("""
 
 # Use o componente st.markdown para inserir o estilo embutido na página
 st.markdown(hide_header_style, unsafe_allow_html=True)
-
-
-# Adicionar o CSS para ocultar o elemento stSidebarNav
-st.markdown("""
-<style>
-.st-emotion-cache-79elbk {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<style>
-.st-emotion-cache-vk3wp9 {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 
 
 # Definir a cor de fundo da página
