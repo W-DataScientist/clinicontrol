@@ -24,9 +24,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Use o componente st.markdown para inserir o estilo embutido na página
-st.markdown(hide_header_style, unsafe_allow_html=True)
-
 
 # Definir a cor de fundo da página
 cor_fundo = "#dcdcdc"  # Você pode substituir pela cor desejada
