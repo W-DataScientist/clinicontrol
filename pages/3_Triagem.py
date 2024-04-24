@@ -2,7 +2,7 @@ import streamlit as st
 import sqlite3
 from datetime import datetime
 import socket
-import pyautogui
+#import pyautogui
 import time
 
 # Adicione o código CSS para ocultar o cabeçalho
