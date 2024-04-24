@@ -29,7 +29,7 @@ st.markdown("""
 st.markdown("""
     <style>
     .viewerBadge_container__r5tak {
-        display: none !important;
+        display: none;
     }
     </style>
 """, unsafe_allow_html=True)
