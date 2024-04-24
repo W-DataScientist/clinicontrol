@@ -2,9 +2,6 @@ import streamlit as st
 import time
 from datetime import datetime
 
-
-pyautogui.press('f11')
-
 # Configurar a página antes de qualquer outra função Streamlit
 st.set_page_config(layout="wide")
 
